@@ -3,6 +3,11 @@ import Image from "next/image";
 import getStyles from "../utils/getStyles.js";
 import getImageSizeProps from "../utils/getImageSizeProps";
 
+/**
+ * See the CoreParagraph for details on how these blocks are structured.
+ *
+ * @see ./CoreParagraph.js
+ */
 export default function CoreImage(props) {
   const attributes = props.attributes;
   const style = getStyles(attributes);
