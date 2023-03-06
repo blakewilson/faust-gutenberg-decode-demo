@@ -6,11 +6,10 @@
 @import "css-variables";
 @import "base";
 @import "utilities";
-@import "blocks";
 
-// * {
-//   box-sizing: border-box;
-// }
+* {
+  box-sizing: border-box;
+}
 
 #__next {
   display: flex;
