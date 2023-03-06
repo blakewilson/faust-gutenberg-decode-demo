@@ -8,6 +8,14 @@ import blocks from "../wp-blocks";
 import flatListToHierarchical from "../utils/flatListToHierarchical";
 import getFragmentDataFromBlocks from "../utils/getFragmentDataFromBlocks";
 
+/**
+ * This is a Faust Template for resolving singular templates (posts, pages).
+ *
+ * If you are unfamiliar with Faust Templates, they resolve much like the
+ * WordPress Template Hierarchy.
+ *
+ * @see https://faustjs.org/docs/templates
+ */
 export default function Component(props) {
   const { title: siteTitle, description: siteDescription } =
     props.data.generalSettings;
