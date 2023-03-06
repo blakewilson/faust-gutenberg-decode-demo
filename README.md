@@ -8,7 +8,7 @@ This repo is an example project to show how you can use [WPGraphQL Content Block
 
 Create a WordPress site. I recommend using [Local](https://localwp.com) for this.
 
-### Install Plugins
+### Install plugins
 
 This example project requires the following plugins:
 
@@ -16,7 +16,7 @@ This example project requires the following plugins:
 - [Faust](https://wordpress.org/plugins/faustwp/)
 - [WPGraphQL Content Blocks](https://github.com/wpengine/wp-graphql-content-blocks)
 
-### Install NPM Dependencies
+### Install NPM dependencies
 
 Run the following command from the project root:
 
@@ -38,7 +38,7 @@ NEXT_PUBLIC_WORDPRESS_URL=https://faustexample.wpengine.com
 # FAUST_SECRET_KEY=YOUR_PLUGIN_SECRET
 ```
 
-Copy andy paste the URL to your WordPress site and replace `https://faustexample.wpengine.com` with it.
+Copy the URL of your WordPress site and replace `https://faustexample.wpengine.com` with it.
 
 ### Run the dev server
 
@@ -48,11 +48,11 @@ npm run dev
 
 Your Faust site will be available at http://localhost:3000.
 
-### Set the Frontend site URL in Faust Settings
+### Set the frontend site URL in Faust settings
 
 In the "Front-end site URL" input box, enter `http://localhost:3000` and hit "save changes"
 
-### Create a Page with Blocks
+### Create a page with blocks
 
 Now, create a page with block content. This example project has only implemented the following blocks:
 
