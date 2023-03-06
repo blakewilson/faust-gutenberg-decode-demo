@@ -2,6 +2,13 @@ import isObject from "lodash/isObject";
 import map from "lodash/map";
 import camelCase from "lodash/camelCase";
 
+/**
+ * Converts a CSS string into a usable React style.
+ *
+ * @example background-color: #728b51; -> { backgroundColor: "#728b51" }
+ *
+ * @param {string} css The CSS string.
+ */
 export const cssToReactStyle = (css) => {
   // If object is given, return object (could be react style object mistakenly provided)
   if (isObject(css)) {
