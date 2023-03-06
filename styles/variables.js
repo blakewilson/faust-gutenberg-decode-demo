@@ -24,4 +24,5 @@ export const fontSizesMap = {
   small: "1rem",
   normal: "1.5rem",
   large: "1.75rem",
+  "x-large": "2.25rem",
 };
