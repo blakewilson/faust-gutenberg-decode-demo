@@ -1,3 +1,10 @@
+/**
+ * Collects all the blocks' fragment entries and keys and returns an array of
+ * them so one doesn't have to manually specify the entry and key for each block.
+ *
+ * @param {Object} blocks The blocks from wp-blocks/index.js
+ * @returns
+ */
 export default function getFragmentDataFromBlocks(blocks) {
   const entries = Object.keys(blocks)
     .map((key) => {

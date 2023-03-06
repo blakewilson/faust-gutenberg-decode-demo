@@ -1,3 +1,11 @@
+/**
+ * Transforms an "attributes" object from a core/image block in
+ * WPGraphQL Content Blocks into a usable React "style" object with the proper
+ * width and height
+ *
+ * @param {Object} attributes Attributes object from a core/image block
+ * @returns
+ */
 export default function getImageSizeProps(attributes) {
   const sizeSlug = attributes?.sizeSlug;
   if (sizeSlug) {

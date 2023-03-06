@@ -1,3 +1,11 @@
+/**
+ * Takes a flat list of contentBlocks and reorders them into a proper
+ * hierarchy using the id and parentId block properties.
+ *
+ * @param {Array} data The blocks from WPGraphQL Content Blocks
+ * @param {*} param1
+ * @returns
+ */
 export default function flatListToHierarchical(
   data = [],
   { idKey = "id", parentKey = "parentId", childrenKey = "children" } = {}

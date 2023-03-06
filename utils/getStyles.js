@@ -7,7 +7,6 @@ import { compileCSS } from "@wordpress/style-engine";
  * usable React "style" object with proper colors and font sizes from the variables.js file.
  *
  * @param {Object} attributes Attributes object for a Block from WPGraphQL Content Blocks
- * @returns
  */
 export default function getStyles(attributes) {
   return {
