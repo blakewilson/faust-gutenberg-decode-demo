@@ -20,14 +20,14 @@ export default function Component(props) {
   const { title: siteTitle, description: siteDescription } =
     props.data.generalSettings;
   const menuItems = props.data.primaryMenuItems.nodes;
-  const { title, contentBlocks } = props.data.nodeByUri;
+  const { title, editorBlocks } = props.data.nodeByUri;
 
   /**
    * Get contentBlocks from props.data and pass them through
    * flatListToHierarchical() to re-assemble them into a proper
    * node hierarchy.
    */
-  const blocks = flatListToHierarchical(contentBlocks);
+  const blocks = flatListToHierarchical(editorBlocks);
 
   return (
     <>
@@ -55,7 +55,7 @@ export default function Component(props) {
          *
          * @see https://faustjs.org/docs/reference/WordPressBlocksViewer
          */}
-        <WordPressBlocksViewer contentBlocks={blocks} />
+        <WordPressBlocksViewer blocks={blocks} />
       </main>
 
       <Footer />
@@ -84,15 +84,15 @@ Component.query = gql`
       ... on NodeWithTitle {
         title
       }
-      ... on NodeWithContentBlocks {
+      ... on NodeWithEditorBlocks {
         # Get contentBlocks with flat=true and the nodeId and parentId
         # so we can reconstruct them later using flatListToHierarchical()
-        contentBlocks(flat: true) {
+        editorBlocks {
           cssClassNames
           isDynamic
           name
-          id: nodeId
-          parentId
+          id: clientId
+          parentId: parentClientId
           renderedHtml
 
           # Get all block fragment keys and call them in the query
